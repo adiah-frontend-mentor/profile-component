@@ -1,0 +1,103 @@
+// Breakpoints
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+@mixin breakpoint-up($size){
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+
+// Variables
+$mainBg: hsl(185, 75%, 39%);
+$darkText: hsl(229, 23%, 23%);
+$lightText: hsl(227, 10%, 46%);
+$grey: hsla(0, 0%, 59%, 0.315);
+
+.App {
+	height: 100%;
+	background-color: $mainBg;
+	background-repeat: no-repeat;
+	background-position: right 136px bottom 310px, top 261px left 142px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint-up(medium) {
+		background-position: bottom 240px left -188px, top 311px right -164px;
+	}
+
+	.card-wrapper {
+		background-color: #fff;
+		background-repeat: no-repeat;
+		border-radius: 14px;
+		min-width: 20.375rem;
+		// padding: 5.4375rem 3.375rem 1.5rem 3.375rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoint-up(medium) {
+			max-width: 22rem;
+		}
+
+		.avatar {
+			width: 106px;
+			border-radius: 50%;
+			border: 5px solid white;
+			margin-top: 5.4375rem;
+			margin-bottom: 1.1875rem;
+		}
+
+		.details {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			padding-bottom: 1.5rem;
+			border-bottom: 1px solid $grey;
+			margin-bottom: 1.5rem;
+
+			h1 {
+				font-size: 1.125rem;
+				color: $darkText;
+				font-weight: 700;
+
+				.age {
+					font-weight: 400;
+					color: $lightText;
+				}
+			}
+
+			p {
+				font-size: 0.875rem;
+				color: $lightText;
+			}
+		}
+
+		.stats {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+
+			.category {
+				text-align: center;
+
+				.count {
+					color: $darkText;
+					font-size: 1.125rem;
+					letter-spacing: 0.28px;
+				}
+
+				.label {
+					color: $lightText;
+					font-size: 0.625rem;
+					letter-spacing: 1.57px;
+					margin-bottom: 1.5rem;
+				}
+			}
+		}
+	}
+}
