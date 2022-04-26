@@ -27,8 +27,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Solution code](https://github.com/nathanieladiah/time-tracker)
-- Live Site URL: [Solution site](https://nathanieladiah.github.io/time-tracker)
+- Solution URL: [https://github.com/nathanieladiah/profile-component](https://github.com/nathanieladiah/profile-component)
+- Live Site URL: [https://nathanieladiah.github.io/profile-component](https://nathanieladiah.github.io/profile-component)
 
 ## My process
 
